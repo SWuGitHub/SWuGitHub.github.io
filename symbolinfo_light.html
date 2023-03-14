@@ -14,14 +14,18 @@
               if (!results[2]) return '';
               return decodeURIComponent(results[2].replace(/\+/g, ' '));
           }
-    const symbol = getParameterByName('pair')
-    {
-        "symbol": "${symbol}",
-        "width": "100%",
-        "locale": "en",
-        "colorTheme": "light",
-        "isTransparent": true
-    }
+          const container = document.getElementById("view")
+          const symbol = getParameterByName('pair')
+          document.addEventListener('DOMContentLoaded', function () {
+              var iframe = document.createElement('iframe')
+              iframe.setAttribute(
+                  'src',
+                  `https://s.tradingview.com/embed-widget/single-quote#{"symbol":"${symbol}","colorTheme":"light"}`,
+              );
+              iframe.setAttribute('frameborder', 0)
+              iframe.setAttribute('style', 'box-sizing: border-box; height: 100%; width: 100%;')
+              container.appendChild(iframe)
+          });
     </script>
 </div>
 <!-- TradingView Widget END -->
