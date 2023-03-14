@@ -1,11 +1,10 @@
-<!-- TradingView Widget BEGIN -->
 <body>
 <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
     <div class="tradingview-widget-copyright" id="view"></div>
 </div>
 <script type="text/javascript">
-function getParameterByName(name, url = window.location.href) {
+          function getParameterByName(name, url = window.location.href) {
               name = name.replace(/[\[\]]/g, '\\$&');
               var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
                   results = regex.exec(url);
@@ -19,7 +18,7 @@ function getParameterByName(name, url = window.location.href) {
               var iframe = document.createElement('iframe')
               iframe.setAttribute(
                   'src',
-                  `https://s.tradingview.com/embed-widget/symbol-info#{"symbol":"${symbol}","colorTheme":"light","isTransparent": true}`,
+                  `https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js#{"symbol":"${symbol}","colorTheme":"light"}`,
               );
               iframe.setAttribute('frameborder', 0)
               iframe.setAttribute('style', 'box-sizing: border-box; height: 100%; width: 100%;')
@@ -30,4 +29,3 @@ function getParameterByName(name, url = window.location.href) {
 </script>
 </div>
 </body>
-<!-- TradingView Widget END -->
