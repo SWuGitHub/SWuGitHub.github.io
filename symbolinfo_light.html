@@ -1,11 +1,8 @@
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener"
-                                                 target="_blank"><span class="blue-text">price today</span></a> by TradingView
-    </div>
     <script type="text/javascript">
-    function getParameterByName(name, url = window.location.href) {
+          function getParameterByName(name, url = window.location.href) {
               name = name.replace(/[\[\]]/g, '\\$&');
               var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
                   results = regex.exec(url);
@@ -13,6 +10,7 @@
               if (!results[2]) return '';
               return decodeURIComponent(results[2].replace(/\+/g, ' '));
           }
+        
           const container = document.getElementById("view")
           const symbol = getParameterByName('symbol')
           document.addEventListener('DOMContentLoaded', function () {
