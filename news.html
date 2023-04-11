@@ -19,7 +19,8 @@
     script_tag.type = 'text/javascript';
     script_tag.src = 'https://s3.tradingview.com/external-embedding/embed-widget-timeline.js';
     script_tag.text = `{
-      "feedMode": "${symbol}",
+      "feedMode": "symbol",
+      "symbol": "${symbol}",
       "colorTheme": "${theme}",
       "isTransparent": true,
       "displayMode": "regular",
